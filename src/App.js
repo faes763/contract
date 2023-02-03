@@ -65,7 +65,7 @@ function App() {
   }
   async function connectAccount() {
     if(typeof window.ethereum == "undefined") {
-      console.log("metamask is installed");
+      console.log("metamask is not installed");
       return;
     }
     const accounts = await window.ethereum.request({method: 'eth_requestAccounts'});
