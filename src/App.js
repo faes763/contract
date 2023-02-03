@@ -73,6 +73,12 @@ function App() {
     // console.log(account);
     return account;
   }
+  useEffect(() => {
+    async function test() {
+      setGrandChildLength(await getGrandChildLength())  
+    }
+    test();
+  }, []);
   return (
     <div className="App">
       <div className='addGrandChild'>
